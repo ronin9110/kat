@@ -14,7 +14,7 @@ import video3 from "@/videos/video3.mp4";
 export default function VideoPage() {
   return (
     <div className="min-h-screen flex justify-center items-center bg-background px-4 py-10">
-      <Card className="w-full max-w-3xl shadow-xl bg-zinc-900 text-white border-zinc-800">
+      <Card className="w-full max-w-3xl shadow-xs text-white">
 
         <CardHeader>
           <CardTitle className="text-center text-2xl sm:text-3xl font-semibold">

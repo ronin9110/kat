@@ -6,8 +6,8 @@ import Link from "next/link";
 import Video from "next-video";
 import video1 from "@/videos/video1.mp4";
 import video2 from "@/videos/video2.mp4";
-import pic1 from "@/videos/pic1.jpg";
-import cat from "@/videos/cat.gif";
+import pic1 from "@/app/gallery/pic1.jpg";
+import cat from "@/app/gallery/cat.gif";
 import { Button } from "@/components/ui/button";
 import {
   Card,
@@ -65,12 +65,16 @@ export default function Page() {
               <Card>
                 <CardContent className="flex flex-col items-center justify-center">
                   <div className="w-full flex justify-center">
-                    <Video
-                      src={video1}
-                      height={400}
-                      width={800}
-                      className="rounded-lg object-contain w-full h-auto max-h-[70vh]"
-                    />
+                    <div className="w-full max-w-[800px] aspect-video">
+                      <Video
+                        src={video1}
+                        className="w-full rounded-lg"
+              style={{
+                aspectRatio: "16 / 9",
+                height: "auto",
+              }}
+                      />
+                    </div>
                   </div>
                 </CardContent>
                 <CardFooter className="flex flex-col text-center">
@@ -93,12 +97,16 @@ export default function Page() {
               <Card>
                 <CardContent className="flex flex-col items-center justify-center">
                   <div className="w-full flex justify-center">
-                    <Video
-                      src={video2}
-                      height={400}
-                      width={800}
-                      className="rounded-lg object-contain w-full h-auto max-h-[70vh]"
-                    />
+                    <div className="w-full max-w-[800px] aspect-video">
+                      <Video
+                        src={video2}
+                        className="w-full rounded-lg"
+              style={{
+                aspectRatio: "16 / 9",
+                height: "auto",
+              }}
+                      />
+                    </div>
                   </div>
                 </CardContent>
                 <CardFooter className="flex flex-col text-center">
